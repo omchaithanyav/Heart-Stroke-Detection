@@ -1,0 +1,12 @@
+Flask
+gunicorn
+Jinja2
+keras
+numpy
+gunicorn
+validators
+scikit-learn
+Werkzeug
+itsdangerous
+MarkupSafe
+tensorflow-cpu
