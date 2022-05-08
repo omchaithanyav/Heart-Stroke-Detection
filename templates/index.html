@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <style>
+body{
+        background-image: url("{{ url_for('static', filename='BG.jpg') }}");
+        background-attachment: fixed;
+    }
+</style>
+</head>
+<body style="background-color:#5c42ff;">
+<h1 style="text-align:center;font-size:65px"><font color="#ffffff">Stroke Detection</font></h1>
+<form action="{{ url_for('predict')}}" method='post'>
+  <label for="age">Age:</label><br>
+  <input type="text" id="age" name="age" placeholder="age" required="required" ><br>
+  <label for="gender">Gender:</label><br>
+  <select name="gender" id="gender" placeholder="gender">
+  <option value=0>Female</option>
+  <option value=1>Male</option>
+    <option value=2>Other</option>
+</select><br><br>
+  <label for="avg_glucose_level">Average glucose level:</label><br>
+  <input type="text" id="avg_glucose_level" name="avg_glucose_level" placeholder="avg glucose level" required="required" ><br><br>
+  <label for="heart_disease">Heart disease:</label><br>
+  <select name="heart_disease" id="heart_disease" placeholder="heart disease">
+  <option value=0>No</option>
+  <option value=1>Yes</option>
+</select><br><br>
+  <label for="hypertension">Hypertension:</label><br>
+  <select name="hypertension" id="hypertension" placeholder="hypertension">
+  <option value=1>Yes</option>
+  <option value=0>No</option>
+</select><br><br>
+  <label for="ever_married">Ever married:</label><br>
+  <select name="ever_married" id="ever_married" placeholder="ever married">
+  <option value=1>Yes</option>
+  <option value=0>No</option>
+</select><br><br>
+  <label for="bmi">BMI:</label><br>
+   <input type="text" id="bmi" name="bmi" placeholder="bmi" required="required" ><br><br>
+  <label for="smoking_status">Smoking status:</label><br>
+  <select name="smoking_status" id="smoking_status" placeholder="smoking status">
+  <option value=1>formerly smoked</option>
+  <option value=2>never smoked</option>
+  <option value=3>smokes</option>
+  <option value=0>unknown</option>
+  </select><br><br>
+    <label for="work_type">Work type:</label><br>
+  <select name="work_type" id="work_type" placeholder="work type">
+  <option value=2>Private</option>
+  <option value=3>Self-employed</option>
+  <option value=0>Govt_job</option>
+  <option value=4>children</option>
+    <option value=1>Never_worked</option>
+</select><br><br>
+     <label for="Residence_type">Residence type:</label><br>
+  <select name="Residence_type" id="Residence_type" placeholder="residence type">
+  <option value=1>Urban</option>
+  <option value=0>Rural</option>
+</select><br><br>
+  <input type="submit" value="PREDICT">
+</form>
+
+</body>
+</html>
